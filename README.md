@@ -1,36 +1,91 @@
-# ZeroToOne Project Starter
+![ZeroToOne Banner](./banner.png)
+# 🚀 ZeroToOne Project Starter
 
-This is a monorepo starter kit for launching polished MVPs fast.
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?s=https://github.com/ZeroToOne/zero-to-one-project-starter)
 
-## Features
+**The fastest way to launch a beautifully designed SaaS MVP.**  
+A production-ready monorepo built for founders who want to move fast without sacrificing quality.
 
-- 🧠 Next.js 14 (App Router)
-- 🎨 TailwindCSS + shadcn/ui
-- 🔐 Auth.js (next-auth) and Clerk.js support
-- 💳 Stripe Billing Integration
-- 🧩 Shared component library from ZeroToOne MVP UI Kit
-- 📦 Turborepo-style monorepo with Yarn Workspaces
+---
 
-## Getting Started
+## ✨ Features
+
+- 🧠 **Next.js 14 (App Router)** – Flexible, modern routing
+- 🎨 **TailwindCSS + shadcn/ui** – Clean, responsive UI out of the box
+- 🔐 **Clerk.js** _and_ **Auth.js (NextAuth)** – Choose your auth path
+- 💳 **Stripe Billing Integration** – Subscription-ready with pricing + checkout
+- 🧩 **Shared UI Kit** – Uses components from the [ZeroToOne MVP UI Kit](https://github.com/ZeroToOne/zero-to-one-mvp-ui-kit)
+- 📦 **Monorepo with Yarn Workspaces** – Scalable structure using a Turborepo-style layout
+
+---
+
+## 🛠 Getting Started
 
 ```bash
-yarn install
-yarn dev
+yarn install       # Install dependencies
+yarn dev           # Run the app locally at http://localhost:3000
 ```
 
-## Structure
+---
 
-- `apps/web`: Main Next.js app
-- `packages/ui`: Shared design system
-- `packages/utils`: Config + auth helpers
+## 🗂 Folder Structure
 
-## Auth Options
+```
+zero-to-one-project-starter/
+├── apps/
+│   └── web/         # Main Next.js app (App Router)
+├── packages/
+│   ├── ui/          # Shared design components
+│   └── utils/       # Auth/session utils and config
+```
 
-Choose between:
+---
 
-- Clerk (hosted auth with UI)
-- Auth.js (NextAuth for custom providers)
+## 🔐 Auth Options
 
-## License
+Choose your preferred method:
 
-MIT
+### ➤ Clerk
+- Hosted auth with beautiful built-in UI
+- Protects routes like `/dashboard`, `/account`
+- Add your keys in `.env`
+
+### ➤ Auth.js (NextAuth)
+- Fully customizable provider-based auth
+- GitHub login enabled by default
+- Includes welcome email trigger on signup
+
+---
+
+## 💳 Billing Integration
+
+- `/pricing`: PricingTable with Stripe checkout
+- `/account`: Shows current plan, status, and upgrade flow
+- `/api/stripe/checkout`: Starts a session
+- `/api/stripe/webhook`: Ready for live billing events
+
+---
+
+## 📬 Email Onboarding
+
+- Integrated with [Resend](https://resend.com/)
+- Sends welcome email after signup (Clerk or Auth.js)
+- Customizable React email templates
+
+---
+
+## 🔧 Built For
+
+✅ Indie hackers  
+✅ Startup founders  
+✅ Agencies building MVPs  
+✅ Devs who want to start smart
+
+---
+
+## 📄 License
+
+MIT — free to use, launch, and scale.
+
+> Built with ❤️ by [ZeroToOne](https://zerotoone.cloud)
